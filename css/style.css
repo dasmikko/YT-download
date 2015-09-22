@@ -1,0 +1,359 @@
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('fontface/OpenSans-Regular-webfont.eot');
+    src: url('fontface/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+    	 url('fontface/OpenSans-Regular-webfont.svg#open_sansregular') format('svg'),
+         url('fontface/OpenSans-Regular-webfont.woff') format('woff'),
+         url('fontface/OpenSans-Regular-webfont.ttf') format('truetype');        
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sansbold';
+    src: url('fontface/OpenSans-Bold-webfont.eot');
+    src: url('fontface/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+    	 url('fontface/OpenSans-Bold-webfont.svg#open_sansbold') format('svg'),
+         url('fontface/OpenSans-Bold-webfont.woff') format('woff'),
+         url('fontface/OpenSans-Bold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+* {
+	font-family: 'open_sansregular';
+	-webkit-font-smoothing: antialiased;
+	text-shadow: rgba(0,0,0,.01) 0 0 1px;
+}
+html {
+	height: 100%;
+	background: transparent;
+	overflow: hidden;
+	font-family: 'open_sansregular';
+}
+
+body {
+	height: 100%;
+}
+
+/*
+	Top bar
+ */
+header {
+	background: #e74c3c;
+	height: 60px;
+	color: #ffffff;
+	position: relative;
+	user-select: none;
+	-webkit-app-region: drag;
+}
+
+.header-inner {
+	line-height: 60px;
+}
+	.header-inner > button {
+		width: 125px;
+	}
+
+header .controls {
+	float: right;
+}
+header #url {
+ 	vertical-align: middle;
+	margin-left: 20px;
+	height: 20px;
+	width: calc(100% - 375px);
+	border: 0;
+	padding: 5px;
+	color: #2c3e50;
+	-webkit-app-region: no-drag;
+ }
+
+.window_controls {
+	width: 100%;
+	padding: 10px 0px;
+ 	-webkit-app-region: drag;
+ 	user-select: none;
+ 	vertical-align: top;
+ 	background: #c0392b;
+ 	text-align: right;
+ 	border-radius: 5px 5px 0 0;
+}
+.window_controls .title {
+	color: #ecf0f1;
+	float: left;
+	margin-left: 10px;
+	font-size: 15px;
+}
+.window_controls a {
+	text-align: center;
+	display: inline-block;
+	height: 15px;
+	width: 15px;
+	border-radius: 50%;
+	margin-right: 10px;
+	cursor: pointer;
+	-webkit-app-region: no-drag;
+	transition: all 200ms ease;
+}
+.window_controls .close {
+	background: #ecf0f1;
+}
+	.window_controls .close:hover {
+		background: #bdc3c7;
+	}
+
+.window_controls .maximize {
+	background: #f1c40f;
+}
+	.window_controls .maximize:hover {
+		background: #f39c12;
+	}
+
+.window_controls .minimize {
+	background: #2ecc71;
+}
+	.window_controls .minimize:hover {
+		background: #27ae60;
+	}
+
+.window_controls .devtools {
+	background: #9b59b6;
+}
+	.window_controls .devtools:hover {
+		background: #8e44ad;
+	}
+
+.window_controls .settings {
+	color: #ecf0f1;
+	top: -1px;
+	position: relative;
+}
+
+/*
+	Buttons styling
+ */
+button {
+	display: inline-block;
+	background: none;
+	border: 0px solid #fff;
+	padding: 0px 17px;
+	height: 60px;
+	cursor: pointer;
+	color: #fff;
+	font-size: 15px;
+	transition: all 200ms ease;
+	-webkit-app-region: no-drag;
+	vertical-align: top;
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	width: 160px;
+}
+	button:hover {
+		background: #fff;
+		color: #2c3e50;
+		cursor: pointer;
+	}
+	button:focus {
+		outline: none;
+	}
+	button.active {
+		background: #fff;
+		color: #2c3e50;
+	}
+	button.repeatPlaylist {
+		background: #1abc9c;
+		color: #fff;
+		width: 120px;
+	}
+		button.repeatPlaylist:hover {
+			background: #16a085;
+			color: #fff;
+		}
+	button.repeatSong {
+		background: #9b59b6;
+		color: #fff;
+		width: 110px;
+	}
+		button.repeatSong:hover {
+			background: #8e44ad;
+			color: #fff;
+		}
+	button.saveSettings {
+		position: absolute;
+		bottom: 0px;
+		right: 0px;
+		width: 250px;
+	}
+
+
+label {
+	width: 140px;
+	margin-right: 20px;
+	font-size: 15px;
+	-webkit-app-region: no-drag;
+}
+
+label span {
+	width: 100px;
+	display: inline-block;
+}
+
+
+/*
+	Controller
+ */
+
+.progress {
+    float: right;
+    width: 300px;
+    height: 20px !important;
+    cursor: pointer;
+    background: #c0392b;
+}
+.progress-inner {
+    width: 0;
+    height: 100%;
+    background: #e74c3c;
+    text-align: center;
+	line-height: 20px;
+    transition: all 100ms linear;
+}
+
+
+/*
+	
+	Playlist styling
+
+ */
+#playlist {
+	background: #2c3e50;
+	overflow: auto;
+	height: calc(100% - 97px);
+}
+#playlist ul {
+	margin: 0px;
+	padding: 0px;
+	color: #fff;
+}
+#playlist ul li {
+	padding: 10px 10px;
+	list-style-position: outside;
+	list-style: none;
+	transition: all 200ms ease;
+	cursor: pointer;
+}
+	#playlist ul li:hover {
+		background: rgba(0,0,0,0.5);
+	}
+	#playlist ul li.active {
+		background: rgba(0,0,0,0.5);
+	}
+#playlist .title {
+	width: calc(90% - 300px);
+	float: left;
+}
+
+
+/*
+	File drop in
+ */
+
+#holder { 
+	background: rgba(236, 240, 241,0.8);
+	width: 80%;
+	height: 60%;
+	text-align: center;
+	font-family: 'open_sansbold';
+
+	display:block;
+    position:absolute;
+    top:50%;
+    left:50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+	transition: all 200ms ease;
+	pointer-events: none;
+	opacity: 0;
+}
+#holder p {
+	width: 70%;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    text-transform: uppercase;
+}
+#holder.hover {
+	opacity: 1; 
+	pointer-events: all;
+ }
+
+
+.loadFromUrl {
+ 	background: rgba(231, 76, 60, 0.7);
+ 	position: absolute;
+ 	width: 400px;
+ 	height: 60px;
+ 	line-height: 60px;
+ 	display: none;
+ 	z-index: 999;
+ }
+
+.loadFromUrl input {
+ 	vertical-align: middle;
+	margin-left: 20px;
+	height: 20px;
+	width: 250px;
+	border: 0;
+	padding: 5px;
+	color: #2c3e50;
+ }
+
+.loadFromUrl button {
+ 	float: right;
+ }
+
+ .playlistControl {
+ 	background: rgba(231, 76, 60, 0.7);
+ 	position: absolute;
+ 	left: 227px;
+ 	width: 205px;
+ 	height: 60px;
+ 	line-height: 60px;
+ 	display: none;
+ 	z-index: 999;
+ }
+
+
+
+ .clear {
+ 	clear: both;
+ }
+
+
+ /* 
+----
+---- Settings CSS
+----
+ */
+
+#controls {
+	background: #2c3e50;
+	height: 100%;
+	color: #ecf0f1;
+}
+
+#controls .inner {
+	padding: 20px;
+
+}

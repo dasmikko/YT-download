@@ -1,0 +1,39 @@
+{
+    "description": "YouTube Downloader", 
+    "name": "Youtube-Downloader", 
+    "user-agent": "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36",
+    "nodejs": true, 
+    "maintainers": [
+        {
+            "web": "https://github.com/dasmikko", 
+            "name": "dasmikko"
+        }
+    ], 
+    "single-instance": true, 
+    "keywords": [], 
+    "window": {
+        "fullscreen": false, 
+        "resizable": true, 
+        "title": "anker-player", 
+        "always-on-top": false, 
+        "frame": false, 
+        "width": 700, 
+        "height": 480, 
+        "min_height": 300, 
+        "visible": true, 
+        "as_desktop": false, 
+        "min_width": 590, 
+        "position": "", 
+        "show_in_taskbar": true, 
+        "transparent": true, 
+        "toolbar": false, 
+        "icon": ""
+    }, 
+    "version": "0.1.0", 
+    "webkit": {
+        "page-cache": false, 
+        "java": false, 
+        "plugin": true
+    }, 
+    "main": "index.html"
+}

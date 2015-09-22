@@ -1,0 +1,10 @@
+
+            "content": "\u003Ca href=\"walkthrough.html\" id=\"walkthrough-link\">"
+         }
+      }
+   },
+   "walkthrough_notification1": {
+      "message": "사용자가 방문하는 페이지에서 트래커가 감지되면 Ghostery는 화면의 오른쪽 상단 모서리의 보라색 상자에 이러한 요소를 운영하는 기업을 표시합니다. Ghostery의 이러한 기능을 해제하려면 아래의 확인란에서 표시를 해제하면 됩니다."
+   },
+   "walkthrough_notification2": {
+      "message": "Ghostery의 옵션 페이지에서 보라색 상자를 사용자 정의할 수 

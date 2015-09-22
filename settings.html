@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Youtube Downloader</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/jquery-2.1.1.js"></script>
+</head>
+<body onload="loadSetting">
+<div class="window_controls">
+	<span class="title">Settings</span>
+	<a class="close" title="Close" onclick="closeApp()"></a>
+</div>
+
+<div id="controls">
+	<div class="inner">
+		<table width="100%">
+			<tr>
+				<td>Quality</td>
+				<td align="right">
+					<select name="quality" id="quality_select">
+						<option value="18">360p</option>
+						<option value="44">480p</option>
+						<option value="22">720p</option>
+						<option value="37">1080p</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				
+			</tr>
+
+		</table>
+
+
+
+		<button class="saveSettings" onclick="saveSettings()">Save</button>
+	</div>
+</div>
+
+
+	
+</body>
+<script src="js/require.js"></script>
+<script src="js/settings.js"></script>
+
+
+</html>
